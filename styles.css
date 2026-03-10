@@ -807,7 +807,7 @@ select {
     }
     
     .hero {
-        padding-top: 100px;
+        padding-top: 150px; /* Increased to account for the larger 120px header */
         text-align: center;
     }
     
