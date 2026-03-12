@@ -151,6 +151,27 @@ document.addEventListener('DOMContentLoaded', () => {
                 });
             }
         });
-    });
+    }
+
+    /* --- Home Blog Loader --- */
+    const homeBlogGrid = document.getElementById('home-blog-grid');
+    if(homeBlogGrid) {
+        fetch('posts.json')
+            .then(res => res.json())
+            .then(posts => {
+                const latest = posts.slice(0, 3);
+                homeBlogGrid.innerHTML = latest.map(post => `
+                    <div class="blog-card reveal-up">
+                        <img src="${post.image}" alt="${post.title}" style="height: 200px; width:100%; object-fit:cover;">
+                        <div class="blog-card-body" style="padding: 1.5rem;">
+                            <span style="color:var(--primary-blue); font-size:0.7rem; font-weight:700; text-transform:uppercase;">${post.category}</span>
+                            <h3 style="font-size:1.1rem; margin:0.5rem 0;">${post.title}</h3>
+                            <p style="font-size:0.85rem; line-height:1.4;">${post.excerpt}</p>
+                            <a href="blog.html" class="btn btn-secondary" style="font-size:0.8rem; padding:0;">Ler mais</a>
+                        </div>
+                    </div>
+                `).join('');
+            });
+    }
 
 });

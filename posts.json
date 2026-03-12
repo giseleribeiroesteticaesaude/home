@@ -1,0 +1,29 @@
+[
+    {
+        "id": 1,
+        "title": "Depilação a Laser: 5 Mitos que você precisa parar de acreditar",
+        "excerpt": "Será que dói? Funciona em pele negra? Descubra a verdade sobre o tratamento mais amado das clínicas de estética.",
+        "category": "Depilação",
+        "date": "12 Mar, 2026",
+        "image": "assets/depilacao_laser.png",
+        "content": "A depilação a laser é cercada de dúvidas. Muitos acreditam que o procedimento é extremamente doloroso ou que não funciona em certos tipos de pele. No entanto, com a tecnologia correta, como a que utilizamos na Gisele Ribeiro, o processo é seguro, eficaz e praticamente indolor para todos os fototipos. <br><br><strong>Mito 1: O laser causa câncer.</strong> <br>Falso. O laser utilizado na estética é não ionizante, o que significa que ele não tem energia suficiente para alterar o DNA das células. <br><br><strong>Mito 2: Não pode fazer no verão.</strong> <br>Pode, desde que o paciente siga as orientações de proteção solar e não esteja com a pele bronzeada no dia da sessão."
+    },
+    {
+        "id": 2,
+        "title": "O Guia Definitivo da Criolipólise: O que acontece com a gordura?",
+        "excerpt": "Entenda como o congelamento de células de gordura ajuda a esculpir seu corpo sem a necessidade de cirurgias invasivas.",
+        "category": "Corpo",
+        "date": "10 Mar, 2026",
+        "image": "assets/criolipolise.png",
+        "content": "A criolipólise é um dos tratamentos mais procurados para gordura localizada. Mas você sabe como ela funciona? Basicamente, o equipamento resfria as células adiposas a temperaturas negativas, causando uma cristalização dessas células. <br><br>Uma vez cristalizadas, as células de gordura sofrem um processo natural de morte celular (apoptose) e são eliminadas pelo sistema linfático ao longo de 30 a 60 dias. É um método seguro, sem cortes e sem tempo de recuperação drástico."
+    },
+    {
+        "id": 3,
+        "title": "Laser Lavieem: O segredo da 'Pele de Porcelana'",
+        "excerpt": "Saiba como o BB Laser está revolucionando o rejuvenescimento facial e o tratamento de manchas com rápida recuperação.",
+        "category": "Rosto",
+        "date": "08 Mar, 2026",
+        "image": "assets/laser_lavieem.png",
+        "content": "O Lavieem é um laser de Thulium sub-ablativo que atua na renovação da epiderme. Ele é excelente para tratar poros dilatados, melasma, rugas finas e dar aquele brilho ('glow') que toda pele saudável merece. Diferente de lasers mais agressivos, o Lavieem permite que você volte às suas atividades quase imediatamente, apresentando apenas uma leve vermelhidão temporária."
+    }
+]

@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Blog Gisele Ribeiro - Dicas, cuidados e novidades sobre saúde e estética avançada.">
+    <title>Blog | Gisele Ribeiro Saúde e Estética</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/webp" href="https://i.ibb.co/fGSXRLW4/Giselr-Besf-nw.webp">
+    
+    <!-- Fonts & Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .blog-hero {
+            background-color: var(--primary-blue-dark);
+            color: white;
+            padding: 10rem 0 6rem;
+            text-align: center;
+        }
+
+        .blog-hero h1 { color: white; font-size: 3rem; margin-bottom: 1rem; }
+        .blog-hero p { color: rgba(255,255,255,0.8); font-size: 1.1rem; }
+
+        .blog-container { padding: 4rem 0; }
+        
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 2.5rem;
+        }
+
+        .blog-card {
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: var(--shadow-sm);
+            transition: var(--transition-normal);
+            border: 1px solid rgba(0,0,0,0.05);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .blog-card:hover { transform: translateY(-10px); box-shadow: var(--shadow-lg); }
+
+        .blog-card-img { height: 220px; width: 100%; object-fit: cover; }
+
+        .blog-card-body { padding: 2rem; flex: 1; display: flex; flex-direction: column; }
+        
+        .blog-card-category {
+            color: var(--primary-blue);
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: 700;
+            margin-bottom: 0.8rem;
+        }
+
+        .blog-card-body h3 { font-size: 1.4rem; margin-bottom: 1rem; line-height: 1.3; }
+        .blog-card-body p { font-size: 0.95rem; color: var(--text-muted); margin-bottom: 1.5rem; flex: 1; }
+
+        .blog-card-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-top: 1px solid rgba(0,0,0,0.05);
+            padding-top: 1rem;
+            font-size: 0.85rem;
+            color: var(--text-muted);
+        }
+
+        @media (max-width: 768px) {
+            .blog-grid { grid-template-columns: 1fr; }
+            .blog-hero { padding: 8rem 0 4rem; }
+        }
+
+        /* Post Modal */
+        .post-modal {
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(0,0,0,0.8);
+            z-index: 10000;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem;
+        }
+
+        .modal-content {
+            background: white;
+            width: 100%;
+            max-width: 800px;
+            max-height: 90vh;
+            border-radius: 24px;
+            overflow-y: auto;
+            position: relative;
+            padding: 3rem;
+        }
+
+        .close-modal {
+            position: absolute;
+            top: 1.5rem; right: 1.5rem;
+            background: none; border: none; font-size: 2rem;
+            cursor: pointer; color: var(--text-dark);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Navigation (Simplified) -->
+    <header class="header">
+        <div class="container header-content">
+            <a href="index.html" class="logo">
+                <img src="https://i.ibb.co/fGSXRLW4/Giselr-Besf-nw.webp" alt="Gisele Ribeiro" class="logo-img">
+            </a>
+            <div class="header-actions">
+                <a href="index.html" class="btn btn-outline"><i class="fa-solid fa-arrow-left"></i> Voltar</a>
+                <a href="index.html#agendamento" class="btn btn-primary">Agendar</a>
+            </div>
+        </div>
+    </header>
+
+    <section class="blog-hero">
+        <div class="container">
+            <h1>Blog da Gisele</h1>
+            <p>Conhecimento e dicas exclusivas sobre estética avançada para o seu bem-estar.</p>
+        </div>
+    </section>
+
+    <main class="blog-container">
+        <div class="container">
+            <div id="blog-grid" class="blog-grid">
+                <!-- Posts will be loaded here via JS -->
+                <div class="text-center w-100"><i class="fa-solid fa-spinner fa-spin fa-2x"></i></div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Post Modal -->
+    <div id="postModal" class="post-modal">
+        <div class="modal-content">
+            <button class="close-modal">&times;</button>
+            <div id="postDescription"></div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container footer-bottom-content">
+            <p>&copy; 2026 Gisele Ribeiro Blog. Todos os direitos reservados.</p>
+            <div class="legal-links">
+                <a href="index.html">Home</a>
+                <a href="cursos.html">Academy</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const blogGrid = document.getElementById('blog-grid');
+            const postModal = document.getElementById('postModal');
+            const postDescription = document.getElementById('postDescription');
+            const closeModal = document.querySelector('.close-modal');
+
+            // Load Posts
+            fetch('posts.json')
+                .then(response => response.json())
+                .then(posts => {
+                    blogGrid.innerHTML = '';
+                    posts.forEach(post => {
+                        const card = document.createElement('div');
+                        card.className = 'blog-card';
+                        card.innerHTML = `
+                            <img src="${post.image}" alt="${post.title}" class="blog-card-img">
+                            <div class="blog-card-body">
+                                <span class="blog-card-category">${post.category}</span>
+                                <h3>${post.title}</h3>
+                                <p>${post.excerpt}</p>
+                                <div class="blog-card-footer">
+                                    <span><i class="fa-solid fa-calendar-days"></i> ${post.date}</span>
+                                    <button class="btn btn-secondary read-more" data-id="${post.id}">Ler tudo <i class="fa-solid fa-chevron-right"></i></button>
+                                </div>
+                            </div>
+                        `;
+                        blogGrid.appendChild(card);
+                    });
+
+                    // Add click events for Read More
+                    document.querySelectorAll('.read-more').forEach(btn => {
+                        btn.addEventListener('click', () => {
+                            const postId = btn.getAttribute('data-id');
+                            const post = posts.find(p => p.id == postId);
+                            showPost(post);
+                        });
+                    });
+                });
+
+            function showPost(post) {
+                postDescription.innerHTML = `
+                    <span class="blog-card-category">${post.category}</span>
+                    <h2 style="font-size: 2.2rem; margin: 1rem 0;">${post.title}</h2>
+                    <div style="color: #64748b; margin-bottom: 2rem;">Publicado em ${post.date}</div>
+                    <img src="${post.image}" style="width: 100%; height: 400px; object-fit: cover; border-radius: 16px; margin-bottom: 2rem;">
+                    <div class="post-text-content" style="line-height: 1.8; font-size: 1.1rem; color: #334155;">
+                        ${post.content}
+                    </div>
+                    <div style="margin-top: 3rem; text-align: center;">
+                        <a href="https://wa.me/5562996547768?text=Vi a postagem sobre ${post.title} no blog e gostaria de saber mais." target="_blank" class="btn btn-whatsapp">
+                            <i class="fa-brands fa-whatsapp"></i> Tirar dúvidas sobre isso no WhatsApp
+                        </a>
+                    </div>
+                `;
+                postModal.style.display = 'flex';
+                document.body.style.overflow = 'hidden';
+            }
+
+            closeModal.addEventListener('click', () => {
+                postModal.style.display = 'none';
+                document.body.style.overflow = '';
+            });
+
+            window.addEventListener('click', (e) => {
+                if (e.target == postModal) {
+                    postModal.style.display = 'none';
+                    document.body.style.overflow = '';
+                }
+            });
+        });
+    </script>
+</body>
+</html>
