@@ -151,7 +151,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 });
             }
         });
-    }
+    });
 
     /* --- Home Blog Loader --- */
     const homeBlogGrid = document.getElementById('home-blog-grid');
@@ -171,6 +171,11 @@ document.addEventListener('DOMContentLoaded', () => {
                         </div>
                     </div>
                 `).join('');
+                
+                // Re-run observe for new elements
+                homeBlogGrid.querySelectorAll('.reveal-up').forEach(el => {
+                    revealOnScroll.observe(el);
+                });
             });
     }
 
