@@ -31,20 +31,39 @@
                 <img src="https://i.ibb.co/fGSXRLW4/Giselr-Besf-nw.webp" alt="Gisele Ribeiro Saúde e Estética" class="logo-img">
             </a>
             
-            <a href="#agendamento" class="btn btn-primary d-none-mobile">Agende sua consulta agora</a>
-            
-            <button class="mobile-menu-btn d-none-desktop" aria-label="Toggle Menu">
-                <i class="fa-solid fa-bars"></i>
-            </button>
+            <div class="header-actions">
+                <a href="#agendamento" class="btn btn-primary d-none-mobile">Agende sua consulta</a>
+                <button class="nav-toggle" aria-label="Abrir Menu">
+                    <span class="menu-label d-none-mobile">MENU</span>
+                    <i class="fa-solid fa-bars-staggered"></i>
+                </button>
+            </div>
         </div>
         
-        <!-- Mobile Menu (Hidden by default) -->
-        <div class="mobile-menu">
-            <a href="#servicos" class="mobile-link">Serviços</a>
-            <a href="#beneficios" class="mobile-link">Benefícios</a>
-            <a href="#depoimentos" class="mobile-link">Depoimentos</a>
-            <a href="#agendamento" class="btn btn-primary btn-block">Agendar Consulta</a>
+        <!-- Sidebar Navigation Menu -->
+        <div class="sidebar-nav">
+            <div class="sidebar-header">
+                <button class="nav-close" aria-label="Fechar Menu">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+            <nav class="sidebar-links">
+                <a href="#home" class="sidebar-link active">Início</a>
+                <a href="#servicos" class="sidebar-link">Serviços</a>
+                <a href="#beneficios" class="sidebar-link">Benefícios</a>
+                <a href="#beneficios" class="sidebar-link">Sobre Nós</a>
+                <a href="cursos.html" class="sidebar-link">Academy (Cursos)</a>
+                <a href="#" class="sidebar-link">Blog <span class="badge">Em breve</span></a>
+                <a href="#agendamento" class="btn btn-primary btn-block" style="margin-top: 2rem;">Agendar Consulta</a>
+            </nav>
+            <div class="sidebar-footer">
+                <div class="social-links">
+                    <a href="https://www.instagram.com/giseleribeiro.esteticacomsaude/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://wa.me/5562996547768" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+                </div>
+            </div>
         </div>
+        <div class="nav-overlay"></div>
     </header>
 
     <main>

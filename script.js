@@ -1,32 +1,31 @@
 // Wait for DOM to load
 document.addEventListener('DOMContentLoaded', () => {
 
-    /* --- Mobile Menu Toggle --- */
-    const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
-    const mobileMenu = document.querySelector('.mobile-menu');
-    const mobileLinks = document.querySelectorAll('.mobile-link');
+    /* --- Sidebar Navigation Toggle --- */
+    const navToggle = document.querySelector('.nav-toggle');
+    const navClose = document.querySelector('.nav-close');
+    const sidebarNav = document.querySelector('.sidebar-nav');
+    const navOverlay = document.querySelector('.nav-overlay');
+    const sidebarLinks = document.querySelectorAll('.sidebar-link');
 
-    if(mobileMenuBtn && mobileMenu) {
-        mobileMenuBtn.addEventListener('click', () => {
-            mobileMenu.classList.toggle('active');
-            const icon = mobileMenuBtn.querySelector('i');
-            if(mobileMenu.classList.contains('active')) {
-                icon.classList.remove('fa-bars');
-                icon.classList.add('fa-xmark');
-            } else {
-                icon.classList.remove('fa-xmark');
-                icon.classList.add('fa-bars');
-            }
-        });
-    }
+    const toggleSidebar = (state) => {
+        if(state) {
+            sidebarNav.classList.add('active');
+            navOverlay.classList.add('active');
+            document.body.style.overflow = 'hidden'; // Prevent scrolling
+        } else {
+            sidebarNav.classList.remove('active');
+            navOverlay.classList.remove('active');
+            document.body.style.overflow = ''; // Restore scrolling
+        }
+    };
 
-    mobileLinks.forEach(link => {
-        link.addEventListener('click', () => {
-            mobileMenu.classList.remove('active');
-            const icon = mobileMenuBtn.querySelector('i');
-            icon.classList.remove('fa-xmark');
-            icon.classList.add('fa-bars');
-        });
+    if(navToggle) navToggle.addEventListener('click', () => toggleSidebar(true));
+    if(navClose) navClose.addEventListener('click', () => toggleSidebar(false));
+    if(navOverlay) navOverlay.addEventListener('click', () => toggleSidebar(false));
+
+    sidebarLinks.forEach(link => {
+        link.addEventListener('click', () => toggleSidebar(false));
     });
 
     /* --- Header Scroll Effect --- */
