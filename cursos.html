@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Gisele Ribeiro Academy - Cursos presenciais de estética avançada. Transforme sua carreira com treinamentos práticos em Depilação a Laser, Criolipólise e muito mais.">
+    <title>Academy | Gisele Ribeiro Saúde e Estética</title>
+    
+    <!-- Fonts & Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .academy-hero {
+            background: linear-gradient(rgba(31, 54, 66, 0.8), rgba(31, 54, 66, 0.8)), url('assets/hero_banner.png');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 8rem 0 5rem;
+            text-align: center;
+        }
+
+        .academy-hero h1 {
+            color: white;
+            font-size: 3.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .academy-hero p {
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .course-card {
+            background: white;
+            border-radius: 24px;
+            overflow: hidden;
+            box-shadow: var(--shadow-sm);
+            transition: var(--transition-normal);
+            border: 1px solid rgba(0,0,0,0.05);
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 2rem;
+        }
+
+        .course-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .course-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2.5rem;
+            margin-top: 3rem;
+        }
+
+        .course-info {
+            padding: 2rem;
+        }
+
+        .course-info h3 {
+            font-size: 1.6rem;
+            margin-bottom: 1rem;
+            color: var(--primary-blue-dark);
+        }
+
+        .course-meta {
+            display: flex;
+            gap: 1.5rem;
+            margin-bottom: 1.5rem;
+            font-size: 0.9rem;
+            color: var(--text-muted);
+        }
+
+        .course-meta span {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .course-features-list {
+            list-style: none;
+            margin-bottom: 2rem;
+        }
+
+        .course-features-list li {
+            margin-bottom: 0.8rem;
+            display: flex;
+            align-items: flex-start;
+            gap: 0.8rem;
+            font-size: 0.95rem;
+        }
+
+        .course-features-list i {
+            color: var(--primary-blue);
+            margin-top: 4px;
+        }
+
+        .academy-why {
+            background-color: var(--bg-light);
+        }
+
+        .why-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .why-item {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 20px;
+            text-align: center;
+        }
+
+        .why-item i {
+            font-size: 2.5rem;
+            color: var(--primary-blue);
+            margin-bottom: 1.5rem;
+        }
+
+        @media (max-width: 900px) {
+            .course-grid {
+                grid-template-columns: 1fr;
+            }
+            .why-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container header-content">
+            <a href="index.html" class="logo">
+                <img src="https://i.ibb.co/fGSXRLW4/Giselr-Besf-nw.webp" alt="Gisele Ribeiro Saúde e Estética" class="logo-img">
+            </a>
+            <a href="index.html" class="btn btn-primary"><i class="fa-solid fa-house"></i> Voltar ao Site</a>
+        </div>
+    </header>
+
+    <section class="academy-hero">
+        <div class="container">
+            <h1>Gisele Ribeiro <span style="color: var(--primary-blue-light)">Academy</span></h1>
+            <p>Treinamentos presenciais de alta performance para profissionais que buscam excelência e resultados reais na estética avançada.</p>
+        </div>
+    </section>
+
+    <section class="courses section-padding">
+        <div class="container">
+            <div class="section-heading text-center">
+                <h2>Formações <span class="highlight">Presenciais</span></h2>
+                <p>Domine os protocolos mais lucrativos do mercado com quem é referência na área.</p>
+            </div>
+
+            <div class="course-grid">
+                <!-- Curso 1 -->
+                <div class="course-card">
+                    <img src="assets/depilacao_laser.png" alt="Especialização em Laser" style="height: 200px; object-fit: cover;">
+                    <div class="course-info">
+                        <h3>Especialização em Depilação a Laser</h3>
+                        <div class="course-meta">
+                            <span><i class="fa-solid fa-clock"></i> 16 Horas</span>
+                            <span><i class="fa-solid fa-location-dot"></i> Presencial</span>
+                        </div>
+                        <ul class="course-features-list">
+                            <li><i class="fa-solid fa-circle-check"></i> Teoria aprofundada sobre física do laser.</li>
+                            <li><i class="fa-solid fa-circle-check"></i> Prática monitorada em diversos fototipos.</li>
+                            <li><i class="fa-solid fa-circle-check"></i> Estratégias de venda e fidelização.</li>
+                        </ul>
+                        <a href="https://wa.me/5562996547768?text=Olá Gisele! Gostaria de mais informações sobre o Curso de Depilação a Laser." target="_blank" class="btn btn-whatsapp w-100">
+                            <i class="fa-brands fa-whatsapp"></i> Consultar Vagas
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Curso 2 -->
+                <div class="course-card">
+                    <img src="assets/criolipolise.png" alt="Master em Criolipólise" style="height: 200px; object-fit: cover;">
+                    <div class="course-info">
+                        <h3>Master em Criolipólise de Alta Performance</h3>
+                        <div class="course-meta">
+                            <span><i class="fa-solid fa-clock"></i> 08 Horas</span>
+                            <span><i class="fa-solid fa-location-dot"></i> Presencial</span>
+                        </div>
+                        <ul class="course-features-list">
+                            <li><i class="fa-solid fa-circle-check"></i> Protocolos de redução imediata de medidas.</li>
+                            <li><i class="fa-solid fa-circle-check"></i> Gerenciamento de intercorrências e segurança.</li>
+                            <li><i class="fa-solid fa-circle-check"></i> Aplicação prática em modelos reais.</li>
+                        </ul>
+                        <a href="https://wa.me/5562996547768?text=Olá Gisele! Gostaria de mais informações sobre o Curso de Criolipólise." target="_blank" class="btn btn-whatsapp w-100">
+                            <i class="fa-brands fa-whatsapp"></i> Consultar Vagas
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Curso 3 -->
+                <div class="course-card">
+                    <img src="assets/laser_lavieem.png" alt="Laser Lavieem Expert" style="height: 200px; object-fit: cover;">
+                    <div class="course-info">
+                        <h3>Expert em Laser Lavieem & BB Laser</h3>
+                        <div class="course-meta">
+                            <span><i class="fa-solid fa-clock"></i> 10 Horas</span>
+                            <span><i class="fa-solid fa-location-dot"></i> Presencial</span>
+                        </div>
+                        <ul class="course-features-list">
+                            <li><i class="fa-solid fa-circle-check"></i> Rejuvenescimento e tratamento de melasma.</li>
+                            <li><i class="fa-solid fa-circle-check"></i> Combinação com bioestimuladores de colágeno.</li>
+                            <li><i class="fa-solid fa-circle-check"></i> Workshop de prática intensiva.</li>
+                        </ul>
+                        <a href="https://wa.me/5562996547768?text=Olá Gisele! Gostaria de mais informações sobre o Curso de Laser Lavieem." target="_blank" class="btn btn-whatsapp w-100">
+                            <i class="fa-brands fa-whatsapp"></i> Consultar Vagas
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Curso 4 -->
+                <div class="course-card">
+                    <img src="assets/laser_intimo.png" alt="Estética Íntima" style="height: 200px; object-fit: cover;">
+                    <div class="course-info">
+                        <h3>Saúde & Estética Íntima Feminina</h3>
+                        <div class="course-meta">
+                            <span><i class="fa-solid fa-clock"></i> 08 Horas</span>
+                            <span><i class="fa-solid fa-location-dot"></i> Presencial</span>
+                        </div>
+                        <ul class="course-features-list">
+                            <li><i class="fa-solid fa-circle-check"></i> Anatomia e fisiologia do rejuvenescimento íntimo.</li>
+                            <li><i class="fa-solid fa-circle-check"></i> Tecnologias de laser e radiofrequência.</li>
+                            <li><i class="fa-solid fa-circle-check"></i> Ética e abordagem comercial diferenciada.</li>
+                        </ul>
+                        <a href="https://wa.me/5562996547768?text=Olá Gisele! Gostaria de mais informações sobre o Curso de Estética Íntima." target="_blank" class="btn btn-whatsapp w-100">
+                            <i class="fa-brands fa-whatsapp"></i> Consultar Vagas
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="academy-why section-padding">
+        <div class="container">
+            <div class="section-heading text-center">
+                <h2>Por que a <span class="highlight">Gisele Ribeiro Academy</span>?</h2>
+            </div>
+            <div class="why-grid">
+                <div class="why-item">
+                    <i class="fa-solid fa-graduation-cap"></i>
+                    <h3>Ensino Prático</h3>
+                    <p>Foco total na prática em modelos reais sob supervisão direta, garantindo sua segurança.</p>
+                </div>
+                <div class="why-item">
+                    <i class="fa-solid fa-star"></i>
+                    <h3>Protocolos Exclusivos</h3>
+                    <p>Aprenda os métodos que trazem resultados reais e fidelizam pacientes na clínica.</p>
+                </div>
+                <div class="why-item">
+                    <i class="fa-solid fa-certificate"></i>
+                    <h3>Certificação</h3>
+                    <p>Ao concluir o curso, você recebe um certificado reconhecido de especialização.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container footer-bottom-content">
+            <p>&copy; 2026 Gisele Ribeiro Academy. Todos os direitos reservados.</p>
+            <div class="legal-links">
+                <a href="index.html">Início</a>
+                <a href="links.html">Canais de Acesso</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp -->
+    <a href="https://wa.me/5562996547768?text=Olá Gisele! Vi os cursos da Academy e gostaria de tirar algumas dúvidas." class="whatsapp-float" target="_blank">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+</body>
+</html>
