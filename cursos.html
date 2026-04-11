@@ -16,128 +16,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <link rel="stylesheet" href="styles.css">
-    <style>
-        .academy-hero {
-            background: linear-gradient(rgba(31, 54, 66, 0.8), rgba(31, 54, 66, 0.8)), url('assets/hero_banner.png');
-            background-size: cover;
-            background-position: center;
-            color: white;
-            padding: 8rem 0 5rem;
-            text-align: center;
-        }
-
-        .academy-hero h1 {
-            color: white;
-            font-size: 3.5rem;
-            margin-bottom: 1.5rem;
-        }
-
-        .academy-hero p {
-            color: rgba(255, 255, 255, 0.9);
-            font-size: 1.2rem;
-            max-width: 700px;
-            margin: 0 auto;
-        }
-
-        .course-card {
-            background: white;
-            border-radius: 24px;
-            overflow: hidden;
-            box-shadow: var(--shadow-sm);
-            transition: var(--transition-normal);
-            border: 1px solid rgba(0,0,0,0.05);
-            display: flex;
-            flex-direction: column;
-            margin-bottom: 2rem;
-        }
-
-        .course-card:hover {
-            transform: translateY(-5px);
-            box-shadow: var(--shadow-lg);
-        }
-
-        .course-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 2.5rem;
-            margin-top: 3rem;
-        }
-
-        .course-info {
-            padding: 2rem;
-        }
-
-        .course-info h3 {
-            font-size: 1.6rem;
-            margin-bottom: 1rem;
-            color: var(--primary-blue-dark);
-        }
-
-        .course-meta {
-            display: flex;
-            gap: 1.5rem;
-            margin-bottom: 1.5rem;
-            font-size: 0.9rem;
-            color: var(--text-muted);
-        }
-
-        .course-meta span {
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
-
-        .course-features-list {
-            list-style: none;
-            margin-bottom: 2rem;
-        }
-
-        .course-features-list li {
-            margin-bottom: 0.8rem;
-            display: flex;
-            align-items: flex-start;
-            gap: 0.8rem;
-            font-size: 0.95rem;
-        }
-
-        .course-features-list i {
-            color: var(--primary-blue);
-            margin-top: 4px;
-        }
-
-        .academy-why {
-            background-color: var(--bg-light);
-        }
-
-        .why-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 2rem;
-            margin-top: 3rem;
-        }
-
-        .why-item {
-            background: white;
-            padding: 2.5rem;
-            border-radius: 20px;
-            text-align: center;
-        }
-
-        .why-item i {
-            font-size: 2.5rem;
-            color: var(--primary-blue);
-            margin-bottom: 1.5rem;
-        }
-
-        @media (max-width: 900px) {
-            .course-grid {
-                grid-template-columns: 1fr;
-            }
-            .why-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
@@ -147,7 +26,8 @@
             <a href="index.html" class="logo">
                 <img src="https://i.ibb.co/fGSXRLW4/Giselr-Besf-nw.webp" alt="Gisele Ribeiro Saúde e Estética" class="logo-img">
             </a>
-            <a href="index.html" class="btn btn-primary"><i class="fa-solid fa-house"></i> Voltar ao Site</a>
+            <a href="index.html" class="btn btn-outline"><i class="fa-solid fa-arrow-left"></i> Voltar</a>
+            <a href="index.html#agendamento" class="btn btn-primary d-none-mobile">Agendar Consulta</a>
         </div>
     </header>
 
@@ -276,6 +156,7 @@
 
     <footer class="footer">
         <div class="container footer-bottom-content">
+            <img src="https://i.ibb.co/fGSXRLW4/Giselr-Besf-nw.webp" alt="Gisele Ribeiro" class="footer-logo" style="height: 50px; filter: brightness(0) invert(1); margin-bottom: 1rem; display: block; margin-left: auto; margin-right: auto;">
             <p>&copy; 2026 Gisele Ribeiro Academy. Todos os direitos reservados.</p>
             <div class="legal-links">
                 <a href="index.html">Início</a>
@@ -284,10 +165,31 @@
         </div>
     </footer>
 
-    <!-- Floating WhatsApp -->
-    <a href="https://wa.me/5562996547768?text=Olá Gisele! Vi os cursos da Academy e gostaria de tirar algumas dúvidas." class="whatsapp-float" target="_blank">
-        <i class="fa-brands fa-whatsapp"></i>
-    </a>
+    <!-- Global Search Overlay -->
+    <div id="searchOverlay" class="search-overlay">
+        <div class="search-container">
+            <div class="search-header">
+                <div class="search-input-wrapper">
+                    <i class="fa-solid fa-magnifying-glass search-icon"></i>
+                    <input type="text" id="searchInput" placeholder="O que você está procurando?" autocomplete="off">
+                </div>
+                <button class="search-close" aria-label="Fechar Busca">&times;</button>
+            </div>
+            <div class="search-results-container">
+                <div id="searchResults" class="search-results">
+                    <div class="search-placeholder">
+                        <i class="fa-solid fa-sparkles"></i>
+                        <p>Digite algo para pesquisar...</p>
+                    </div>
+                </div>
+            </div>
+            <div class="search-footer">
+                <span>Pressione <kbd>ESC</kbd> para fechar</span>
+            </div>
+        </div>
+    </div>
 
+    <!-- Custom JS (Shared) -->
+    <script src="script.js"></script>
 </body>
 </html>

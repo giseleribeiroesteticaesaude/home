@@ -25,5 +25,23 @@
         "date": "08 Mar, 2026",
         "image": "assets/laser_lavieem.png",
         "content": "O Lavieem é um laser de Thulium sub-ablativo que atua na renovação da epiderme. Ele é excelente para tratar poros dilatados, melasma, rugas finas e dar aquele brilho ('glow') que toda pele saudável merece. Diferente de lasers mais agressivos, o Lavieem permite que você volte às suas atividades quase imediatamente, apresentando apenas uma leve vermelhidão temporária."
+    },
+    {
+        "id": 4,
+        "title": "Os benefícios do Laser Íntimo para a saúde feminina",
+        "excerpt": "Muito além da estética: entenda como o tratamento a laser melhora a qualidade de vida, lubrificação e elasticidade.",
+        "category": "Saúde Íntima",
+        "date": "05 Mar, 2026",
+        "image": "assets/laser_intimo.png",
+        "content": "O laser íntimo é um procedimento que tem ganhado cada vez mais espaço por seus benefícios funcionais. Ele atua estimulando a produção de colágeno na mucosa vaginal, o que ajuda na lubrificação natural e na correção da incontinência urinária leve. É um procedimento rápido, indolor e que devolve a confiança e o bem-estar da mulher."
+    },
+    {
+        "id": 5,
+        "title": "Skincare Pós-Procedimento: Como manter os resultados em casa",
+        "excerpt": "Fez Lavieem ou Depilação? Saiba quais produtos usar e quais evitar para garantir que sua pele se recupere perfeitamente.",
+        "category": "Dicas",
+        "date": "02 Mar, 2026",
+        "image": "assets/hero_banner.png",
+        "content": "A manutenção em casa é 50% do resultado do seu tratamento na clínica. Após procedimentos a laser, é fundamental focar na hidratação e proteção solar rigorosa. Evite ácidos fortes nos primeiros 7 dias e use sabonetes neutros. Beber bastante água também ajuda na regeneração da derme."
     }
 ]

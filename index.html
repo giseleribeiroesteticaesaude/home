@@ -35,6 +35,9 @@
             </a>
             
             <div class="header-actions">
+                <button class="search-toggle" aria-label="Abrir Busca">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
                 <a href="#agendamento" class="btn btn-primary d-none-mobile">Agende sua consulta</a>
                 <button class="nav-toggle" aria-label="Abrir Menu">
                     <span class="menu-label d-none-mobile">MENU</span>
@@ -337,7 +340,7 @@
                     <h2>Novidades do <span class="highlight">Blog</span></h2>
                     <p>Fique por dentro das últimas tendências e cuidados com a sua pele.</p>
                 </div>
-                <div class="blog-grid" id="home-blog-grid" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem;">
+                <div class="blog-grid" id="home-blog-grid">
                     <!-- Handled by script -->
                 </div>
                 <div class="text-center" style="margin-top: 3rem;">
@@ -394,6 +397,7 @@
     <footer class="footer">
         <div class="container footer-grid">
             <div class="footer-brand">
+                <img src="https://i.ibb.co/fGSXRLW4/Giselr-Besf-nw.webp" alt="Gisele Ribeiro" class="footer-logo" style="height: 80px; filter: brightness(0) invert(1); margin-bottom: 1.5rem;">
                 <p class="footer-desc">A mais alta tecnologia a favor da sua beleza, auto-estima e bem-estar. Venha viver a experiência.</p>
                 <div class="social-links">
                     <a href="https://www.instagram.com/giseleribeiro.esteticacomsaude/" target="_blank" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
@@ -435,6 +439,31 @@
     
     <!-- Custom JS -->
     <script src="script.js"></script>
+
+    <!-- Global Search Overlay -->
+    <div id="searchOverlay" class="search-overlay">
+        <div class="search-container">
+            <div class="search-header">
+                <div class="search-input-wrapper">
+                    <i class="fa-solid fa-magnifying-glass search-icon"></i>
+                    <input type="text" id="searchInput" placeholder="O que você está procurando?" autocomplete="off">
+                </div>
+                <button class="search-close" aria-label="Fechar Busca">&times;</button>
+            </div>
+            <div class="search-results-container">
+                <div id="searchResults" class="search-results">
+                    <!-- Results will appear here -->
+                    <div class="search-placeholder">
+                        <i class="fa-solid fa-sparkles"></i>
+                        <p>Digite algo para pesquisar tratamentos, dicas e artigos...</p>
+                    </div>
+                </div>
+            </div>
+            <div class="search-footer">
+                <span>Pressione <kbd>ESC</kbd> para fechar</span>
+            </div>
+        </div>
+    </div>
 
     <!-- Floating WhatsApp Button -->
     <a href="https://wa.me/5562996547768?text=Olá Gisele! Gostaria de agendar uma consulta." class="whatsapp-float" target="_blank" aria-label="Falar no WhatsApp">
