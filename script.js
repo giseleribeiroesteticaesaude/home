@@ -70,7 +70,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
     /* --- Scroll Reveal Animations --- */
     const revealElements = document.querySelectorAll('.reveal-up, .reveal-left, .reveal-right');
-    const revealOptions = { threshold: 0.15, rootMargin: "0px 0px -50px 0px" };
+    const revealOptions = { 
+        threshold: 0.05, // Lower threshold for mobile reliability
+        rootMargin: "0px 0px -20px 0px" 
+    };
 
     const revealOnScroll = new IntersectionObserver((entries, observer) => {
         entries.forEach(entry => {
@@ -81,7 +84,19 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }, revealOptions);
 
-    revealElements.forEach(el => revealOnScroll.observe(el));
+    revealElements.forEach(el => {
+        revealOnScroll.observe(el);
+        // Fallback: If element is already in viewport on load, show it
+        const rect = el.getBoundingClientRect();
+        if (rect.top < window.innerHeight && rect.bottom > 0) {
+            el.classList.add('active');
+        }
+    });
+
+    // Final fallback: Ensure everything is visible after 2 seconds even if observer fails
+    setTimeout(() => {
+        revealElements.forEach(el => el.classList.add('active'));
+    }, 2500);
 
     /* --- Form Submission (WhatsApp Redirect) --- */
     const bookingForm = document.getElementById('bookingForm');
