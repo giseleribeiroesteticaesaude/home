@@ -750,13 +750,18 @@ ul {
     margin-bottom: 1.5rem;
 }
 
-.row {
+.row, .row-mobile {
     display: flex;
     gap: 1.5rem;
 }
 
+.row-mobile {
+    gap: 1rem; /* Slightly tighter gap for mobile */
+}
+
 .col {
     flex: 1;
+    min-width: 0; /* Prevents flex items from overflowing */
 }
 
 label {
