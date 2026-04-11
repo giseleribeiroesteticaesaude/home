@@ -919,8 +919,13 @@ select {
 }
 
 /* Utilities & Animations */
-.d-none-desktop { display: none; }
-.d-none-mobile { display: block; }
+.d-none-desktop { display: none !important; }
+.d-none-mobile { display: inline-flex !important; }
+
+@media (max-width: 992px) {
+    .d-none-desktop { display: inline-flex !important; }
+    .d-none-mobile { display: none !important; }
+}
 
 .reveal-up {
     opacity: 0;
