@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Gisele Ribeiro Saúde e Estética - Tratamentos modernos de Depilação a Laser, Criolipólise, Laser Lavieem e Laser Íntimo. Agende sua consulta!">
+    <title>Gisele Ribeiro | Saúde e Estética</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/webp" href="https://i.ibb.co/fGSXRLW4/Giselr-Besf-nw.webp">
+    
+    <!-- Google Fonts: Inter and Outfit -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Swiper CSS for Carousel -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+
+    <!-- Google Icons (Material Symbols Outlined) -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container header-content">
+            <a href="index.html" class="logo">
+                <img src="https://i.ibb.co/fGSXRLW4/Giselr-Besf-nw.webp" alt="Gisele Ribeiro Saúde e Estética" class="logo-img">
+            </a>
+            
+            <div class="header-actions">
+                <a href="#agendamento" class="btn btn-primary d-none-mobile">Agende sua consulta</a>
+                <button class="nav-toggle" aria-label="Abrir Menu">
+                    <span class="menu-label">MENU</span>
+                    <i class="fa-solid fa-bars-staggered"></i>
+                </button>
+            </div>
+        </div>
+        
+        <!-- Sidebar Navigation Menu -->
+        <div class="sidebar-nav">
+            <div class="sidebar-header">
+                <button class="nav-close" aria-label="Fechar Menu">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+            <nav class="sidebar-links">
+                <a href="#home" class="sidebar-link active">Início</a>
+                <a href="#servicos" class="sidebar-link">Serviços</a>
+                <a href="#beneficios" class="sidebar-link">Benefícios</a>
+                <a href="#beneficios" class="sidebar-link">Sobre Nós</a>
+                <a href="cursos.html" class="sidebar-link">Academy (Cursos)</a>
+                <a href="blog.html" class="sidebar-link">Nosso Blog</a>
+                <a href="#agendamento" class="btn btn-primary btn-block" style="margin-top: 2rem;">Agendar Consulta</a>
+            </nav>
+            <div class="sidebar-footer">
+                <div class="social-links">
+                    <a href="https://www.instagram.com/giseleribeiro.esteticacomsaude/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://wa.me/5562996547768" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="nav-overlay"></div>
+    </header>
+
+    <main>
+        <!-- Introdução & Banner -->
+        <section class="hero" id="home">
+            <div class="container hero-container">
+                <div class="hero-text-content">
+                    <h1>Realce a sua <span class="highlight">Beleza Natural</span></h1>
+                    <p>Referência em tratamentos estéticos modernos e eficazes. Na Gisele Ribeiro Saúde e Estética, nossa missão é promover o seu bem-estar com a mais alta tecnologia e atendimento humanizado.</p>
+                    <div class="hero-actions">
+                        <a href="#agendamento" class="btn btn-primary btn-large">Comece sua transformação</a>
+                        <a href="#servicos" class="btn btn-outline btn-large">Conheça os tratamentos</a>
+                    </div>
+                </div>
+
+                <div class="hero-carousel">
+                    <!-- Swiper -->
+                    <div class="swiper mySwiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide card-slide">
+                                <img src="assets/depilacao_laser.png" alt="Depilação a Laser">
+                                <div class="slide-content">
+                                    <h3>Depilação a Laser</h3>
+                                    <p>Pele lisa e livre de pelos com tecnologia indolor.</p>
+                                </div>
+                            </div>
+                            <div class="swiper-slide card-slide">
+                                <img src="assets/criolipolise.png" alt="Criolipólise">
+                                <div class="slide-content">
+                                    <h3>Criolipólise</h3>
+                                    <p>Redução de gordura localizada sem cirurgia.</p>
+                                </div>
+                            </div>
+                            <div class="swiper-slide card-slide">
+                                <img src="assets/laser_lavieem.png" alt="Laser Lavieem">
+                                <div class="slide-content">
+                                    <h3>Laser Lavieem</h3>
+                                    <p>Rejuvenescimento facial, glow extra e redução de manchas.</p>
+                                </div>
+                            </div>
+                            <div class="swiper-slide card-slide">
+                                <img src="assets/laser_intimo.png" alt="Laser Íntimo">
+                                <div class="slide-content">
+                                    <h3>Laser Íntimo</h3>
+                                    <p>Conforto, revitalização e saúde íntima feminina.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-pagination"></div>
+                        <!-- Add Arrows -->
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Serviços Detalhados -->
+        <section class="services section-padding" id="servicos">
+            <div class="container">
+                <div class="section-heading text-center">
+                    <h2>Nossos <span class="highlight">Serviços</span> Especiais</h2>
+                    <p>Protocolos exclusivos com equipamentos de ponta para resultados reais.</p>
+                </div>
+
+                <div class="services-grid">
+                    <!-- Serviço 1 -->
+                    <div class="service-card reveal-up">
+                        <div class="service-image">
+                            <img src="assets/depilacao_laser.png" alt="Depilação a Laser">
+                            <div class="service-icon"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
+                        </div>
+                        <div class="service-content">
+                            <h3>Depilação a Laser</h3>
+                            <p>O melhor tratamento para remoção definitiva dos pelos. Utiliza uma tecnologia que age diretamente no folículo piloso, garantindo resultados rápidos, menos dor e segurança total para todos os tipos de pele.</p>
+                            <ul class="service-features">
+                                <li><i class="fa-solid fa-check"></i> Remoção definitiva</li>
+                                <li><i class="fa-solid fa-check"></i> Sessões rápidas e confortáveis</li>
+                                <li><i class="fa-solid fa-check"></i> Para todas as peles</li>
+                            </ul>
+                            <a href="#agendamento" class="btn btn-secondary">Quero agendar <i class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+
+                    <!-- Serviço 2 -->
+                    <div class="service-card reveal-up" style="transition-delay: 100ms;">
+                        <div class="service-image">
+                            <img src="assets/criolipolise.png" alt="Criolipólise">
+                            <div class="service-icon"><i class="fa-solid fa-snowflake"></i></div>
+                        </div>
+                        <div class="service-content">
+                            <h3>Criolipólise</h3>
+                            <p>Diga adeus à gordura localizada sem cirurgia. O congelamento controlado das células de gordura permite a eliminação natural pelo organismo, com resultados visíveis progressivos entre 1 e 2 meses, afinando a silhueta.</p>
+                            <ul class="service-features">
+                                <li><i class="fa-solid fa-check"></i> Sem cortes ou agulhas</li>
+                                <li><i class="fa-solid fa-check"></i> Reduz medidas eficientemente</li>
+                                <li><i class="fa-solid fa-check"></i> Definição do contorno</li>
+                            </ul>
+                            <a href="#agendamento" class="btn btn-secondary">Quero agendar <i class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+
+                    <!-- Serviço 3 -->
+                    <div class="service-card reveal-up" style="transition-delay: 200ms;">
+                        <div class="service-image">
+                            <img src="assets/laser_lavieem.png" alt="Laser Lavieem">
+                            <div class="service-icon"><i class="fa-solid fa-masks-theater"></i></div>
+                        </div>
+                        <div class="service-content">
+                            <h3>Laser Lavieem</h3>
+                            <p>O segredo para a pele perfeita ("BB Cream Laser"). Estimula colágeno com precisão, revelando uma pele mais firme, reduzindo linhas finas, manchas, poros dilatados e melhorando drasticamente a textura.</p>
+                            <ul class="service-features">
+                                <li><i class="fa-solid fa-check"></i> Efeito pele de porcelana</li>
+                                <li><i class="fa-solid fa-check"></i> Estimulação de colágeno</li>
+                                <li><i class="fa-solid fa-check"></i> Rápida recuperação</li>
+                            </ul>
+                            <a href="#agendamento" class="btn btn-secondary">Quero agendar <i class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+
+                    <!-- Serviço 4 -->
+                    <div class="service-card reveal-up" style="transition-delay: 300ms;">
+                        <div class="service-image">
+                            <img src="assets/laser_intimo.png" alt="Laser Íntimo">
+                            <div class="service-icon"><i class="fa-solid fa-heart"></i></div>
+                        </div>
+                        <div class="service-content">
+                            <h3>Laser Íntimo</h3>
+                            <p>Saúde, conforto e autoconfiança. Trata a flacidez vaginal, melhora a lubrificação e a elasticidade funcional. Um procedimento indolor, rápido e discreto, proporcionando revitalização completa.</p>
+                            <ul class="service-features">
+                                <li><i class="fa-solid fa-check"></i> Melhora da elasticidade</li>
+                                <li><i class="fa-solid fa-check"></i> Procedimento indolor e rápido</li>
+                                <li><i class="fa-solid fa-check"></i> Qualidade de vida renovada</li>
+                            </ul>
+                            <a href="#agendamento" class="btn btn-secondary">Quero agendar <i class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Benefícios -->
+        <section class="benefits section-padding bg-light" id="beneficios">
+            <div class="container">
+                <div class="benefits-wrapper">
+                    <div class="benefits-image-col reveal-left">
+                        <img src="assets/hero_banner.png" alt="Clínica Moderna e Confortável" class="rounded-image shadow-lg">
+                        <div class="experience-badge">
+                            <span class="badge-num">5+</span>
+                            <span class="badge-text">Anos de<br>Experiência</span>
+                        </div>
+                    </div>
+                    <div class="benefits-content reveal-right">
+                        <h2>Por que escolher a <span class="highlight">Gisele Ribeiro</span>?</h2>
+                        <p class="subtitle">Elevamos o padrão da estética com um atendimento focado exclusivamente em você e em seus objetivos.</p>
+                        
+                        <div class="benefits-list">
+                            <div class="benefit-item">
+                                <div class="icon-box"><i class="fa-solid fa-microchip"></i></div>
+                                <div class="benefit-text">
+                                    <h4>Tecnologia de Ponta</h4>
+                                    <p>Trabalhamos com os equipamentos mais modernos e seguros do mercado.</p>
+                                </div>
+                            </div>
+                            <div class="benefit-item">
+                                <div class="icon-box"><i class="fa-solid fa-user-doctor"></i></div>
+                                <div class="benefit-text">
+                                    <h4>Profissionais Qualificados</h4>
+                                    <p>Equipe especialista, em constante atualização em protocolos avançados.</p>
+                                </div>
+                            </div>
+                            <div class="benefit-item">
+                                <div class="icon-box"><i class="fa-solid fa-spa"></i></div>
+                                <div class="benefit-text">
+                                    <h4>Atendimento Personalizado</h4>
+                                    <p>Avaliação individualizada para traçar o melhor plano de tratamento para seu corpo e pele.</p>
+                                </div>
+                            </div>
+                            <div class="benefit-item">
+                                <div class="icon-box"><i class="fa-solid fa-building-user"></i></div>
+                                <div class="benefit-text">
+                                    <h4>Ambiente Acolhedor</h4>
+                                    <p>Um espaço projetado para o seu conforto, privacidade e relaxamento total.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Depoimentos -->
+        <section class="testimonials section-padding" id="depoimentos">
+            <div class="container">
+                <div class="section-heading text-center">
+                    <h2>Histórias de <span class="highlight">Transformação</span></h2>
+                    <p>Veja o que nossos clientes dizem sobre suas experiências conosco.</p>
+                </div>
+                
+                <div class="testimonials-grid">
+                    <div class="testimonial-card reveal-up">
+                        <div class="quote-icon"><i class="fa-solid fa-quote-left"></i></div>
+                        <p class="testimonial-text">"Fiz o tratamento Lavieem e fiquei impressionada! Minha pele ganhou um brilho incrível já na primeira sessão, as manchas diminuíram bastante. A equipe é maravilhosa."</p>
+                        <div class="rating">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        </div>
+                        <div class="client-info">
+                            <img src="assets/testimonial_1.png" alt="Cliente 1">
+                            <div>
+                                <h4>Mariana Tavares</h4>
+                                <span>Paciente Lavieem</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="testimonial-card reveal-up" style="transition-delay: 150ms;">
+                        <div class="quote-icon"><i class="fa-solid fa-quote-left"></i></div>
+                        <p class="testimonial-text">"Sempre tive medo da depilação a laser doer, mas na clínica da Gisele foi super tranquilo. Aparelho novíssimo, nem senti dor, e o resultado tá sendo definitivo mesmo."</p>
+                        <div class="rating">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        </div>
+                        <div class="client-info">
+                            <img src="assets/testimonial_2.png" alt="Cliente 2">
+                            <div>
+                                <h4>Juliana Alves</h4>
+                                <span>Paciente Depilação a Laser</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="testimonial-card reveal-up" style="transition-delay: 300ms;">
+                        <div class="quote-icon"><i class="fa-solid fa-quote-left"></i></div>
+                        <p class="testimonial-text">"A criolipólise mudou o contorno da minha cintura. Em dois meses notei uma diferença absurda nas roupas. Ambiente muito cheiroso e profissionalismo nota mil!"</p>
+                        <div class="rating">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        </div>
+                        <div class="client-info">
+                            <img src="assets/testimonial_3.png" alt="Cliente 3">
+                            <div>
+                                <h4>Camila Ferreira</h4>
+                                <span>Paciente Criolipólise</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- WhatsApp Banner CTA -->
+        <section class="whatsapp-cta section-padding reveal-up">
+            <div class="container">
+                <div class="cta-box">
+                    <div class="cta-content">
+                        <h2>Prefere agendar pelo <span class="highlight">WhatsApp</span>?</h2>
+                        <p>Nosso atendimento é rápido e personalizado. Tire suas dúvidas e reserve seu horário agora mesmo.</p>
+                    </div>
+                    <a href="https://wa.me/5562996547768?text=Olá Gisele! Gostaria de agendar meu horário. Vi o seu site e gostaria de saber as datas disponíveis." target="_blank" class="btn btn-whatsapp btn-large">
+                        <i class="fa-brands fa-whatsapp"></i> Conversar no WhatsApp
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Blog Preview -->
+        <section class="blog-preview section-padding bg-light">
+            <div class="container">
+                <div class="section-heading text-center">
+                    <h2>Novidades do <span class="highlight">Blog</span></h2>
+                    <p>Fique por dentro das últimas tendências e cuidados com a sua pele.</p>
+                </div>
+                <div class="blog-grid" id="home-blog-grid">
+                    <!-- Handled by script -->
+                </div>
+                <div class="text-center" style="margin-top: 3rem;">
+                    <a href="blog.html" class="btn btn-outline">Ver todos os artigos</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Agendamento -->
+        <section class="booking section-padding" id="agendamento">
+            <div class="container container-sm">
+                <div class="booking-box reveal-up">
+                    <div class="booking-header text-center">
+                        <h2>Agende Sua <span class="highlight">Consulta</span></h2>
+                        <p>Preencha os dados abaixo e nossa equipe entrará em contato rapidamente para confirmar seu horário.</p>
+                    </div>
+                    
+                    <form id="bookingForm" class="booking-form">
+                        <div class="form-group">
+                            <label for="name">Nome Completo</label>
+                            <input type="text" id="name" name="name" placeholder="Seu nome" required>
+                        </div>
+                        <div class="form-group row-mobile">
+                            <div class="col">
+                                <label for="phone">Telefone / WhatsApp</label>
+                                <input type="tel" id="phone" name="phone" placeholder="(00) 00000-0000" required>
+                            </div>
+                            <div class="col">
+                                <label for="email">E-mail</label>
+                                <input type="email" id="email" name="email" placeholder="seu@email.com" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label text="service">Serviço Desejado</label>
+                            <div class="custom-select-wrapper">
+                                <select id="service" name="service" required>
+                                    <option value="" disabled selected>Selecione um tratamento...</option>
+                                    <option value="depilacao">Depilação a Laser</option>
+                                    <option value="criolipolise">Criolipólise</option>
+                                    <option value="lavieem">Laser Lavieem</option>
+                                    <option value="intimo">Laser Íntimo</option>
+                                    <option value="avaliacao">Apenas uma Avaliação</option>
+                                </select>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-submit btn-large w-100">Solicitar Agendamento <i class="fa-solid fa-paper-plane"></i></button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-grid">
+            <div class="footer-brand">
+                <img src="https://i.ibb.co/fGSXRLW4/Giselr-Besf-nw.webp" alt="Gisele Ribeiro" class="footer-logo" style="height: 80px; filter: brightness(0) invert(1); margin-bottom: 1.5rem;">
+                <p class="footer-desc">A mais alta tecnologia a favor da sua beleza, auto-estima e bem-estar. Venha viver a experiência.</p>
+                <div class="social-links">
+                    <a href="https://www.instagram.com/giseleribeiro.esteticacomsaude/" target="_blank" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://www.facebook.com/gisele.ribeirodeoliveira.9/" target="_blank" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="https://wa.me/5562996547768" target="_blank" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-contact">
+                <h3>Contato</h3>
+                <ul>
+                    <li><i class="fa-solid fa-location-dot"></i> Av. Machado de Assis, 86 - Centro<br>Quirinópolis - GO, 75860-092</li>
+                    <li><i class="fa-brands fa-whatsapp"></i> (62) 99654-7768</li>
+                </ul>
+            </div>
+
+            <div class="footer-hours">
+                <h3>Horário de Funcionamento</h3>
+                <ul>
+                    <li><span>Seg. a Sex.:</span> 08:00 às 19:00hr</li>
+                    <li><span>Sábado e Domingo:</span> Fechado</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <div class="container footer-bottom-content">
+                <p>&copy; 2026 Gisele Ribeiro Saúde e Estética. Todos os direitos reservados.</p>
+                <div class="legal-links">
+                    <a href="privacidade.html">Política de Privacidade</a>
+                    <a href="termos.html">Termos de Uso</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    
+    <!-- Custom JS -->
+    <script src="script.js"></script>
+
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/5562996547768?text=Olá Gisele! Gostaria de agendar uma consulta." class="whatsapp-float" target="_blank" aria-label="Falar no WhatsApp">
+        <i class="fa-brands fa-whatsapp"></i>
+        <span class="tooltip">Agende no WhatsApp</span>
+    </a>
+</body>
+</html>
